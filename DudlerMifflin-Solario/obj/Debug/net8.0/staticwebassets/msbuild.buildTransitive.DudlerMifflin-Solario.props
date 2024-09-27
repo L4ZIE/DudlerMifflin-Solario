@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\DudlerMifflin-Solario.props" />
+</Project>

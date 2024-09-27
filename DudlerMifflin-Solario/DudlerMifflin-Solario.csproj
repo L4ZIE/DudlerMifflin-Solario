@@ -14,14 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="Test\Test.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Api\" />
       <Folder Include="Infrastructure\" />
-      <Folder Include="Services\" />
-      <Folder Include="Test\bin\Debug\net8.0\" />
     </ItemGroup>
 
 </Project>

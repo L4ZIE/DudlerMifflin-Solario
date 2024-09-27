@@ -4,7 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="682c9bfe-5e4d-4d8e-8d0d-1051ed55c173" name="Changes" comment="" />
+    <list default="true" id="682c9bfe-5e4d-4d8e-8d0d-1051ed55c173" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Test/GlobalUsings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Test/Test.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Test/UnitTest1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Test/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Test/obj/Debug/net8.0/Test.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Test/obj/Debug/net8.0/Test.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Test/obj/Debug/net8.0/Test.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Test/obj/Debug/net8.0/Test.GlobalUsings.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Test/obj/Debug/net8.0/Test.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Test/obj/Debug/net8.0/Test.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Test/obj/Test.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Test/obj/Test.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Test/obj/Test.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Test/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Test/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Test/obj/project.packagespec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Test/obj/rider.project.restore.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/DudlerMifflin-Solario.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/DudlerMifflin-Solario.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/DudlerMifflin-Solario.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/DudlerMifflin-Solario.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/setupTests.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,16 +57,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2mcgRj27Rf4rS7uY7BcCO3Ew0eU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenDatabaseViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/david/Desktop/DudlerMifflin-Solario"
+    "last_opened_file_path": "C:/Users/david/Desktop/DudlerMifflin-Solario",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -31,4 +85,23 @@
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="682c9bfe-5e4d-4d8e-8d0d-1051ed55c173" name="Changes" comment="" />
+      <created>1727420320019</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727420320019</updated>
+      <workItem from="1727420322225" duration="605000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
 </project>
