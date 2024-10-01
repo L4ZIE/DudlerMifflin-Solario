@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DudlerMifflin-Solario")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bceec02baf6629b51f9a900f23b6a93c88b74b0")]
 [assembly: System.Reflection.AssemblyProductAttribute("DudlerMifflin-Solario")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DudlerMifflin-Solario")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
