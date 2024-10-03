@@ -5,6 +5,8 @@ import NavBar from './NavBar/NavBar.tsx';
 import NewProduct from './NewProduct/NewProduct.tsx';
 import UpdateProduct from './UpdateProduct/UpdateProduct.tsx';
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import OrderHistory from "./OrderHistory/OrderHistory.tsx";
+import YourOrderHistory from "./YourOrderHistory/YourOrderHistory.tsx";
     
 
 type Product = {
@@ -19,12 +21,12 @@ const App: React.FC = () => {
         { id: 1, name: "50 sheets A4 white paper", price: 40, quantity: 1 },
         { id: 2, name: "20 sheets A4 blue paper", price: 30, quantity: 1 },
         { id: 3, name: "100 sheets A4 mixed color paper", price: 100, quantity: 1 },
-        { id: 1, name: "50 sheets A4 white paper", price: 40, quantity: 1 },
-        { id: 2, name: "20 sheets A4 blue paper", price: 30, quantity: 1 },
-        { id: 3, name: "100 sheets A4 mixed color paper", price: 100, quantity: 1 },
-        { id: 1, name: "50 sheets A4 white paper", price: 40, quantity: 1 },
-        { id: 2, name: "20 sheets A4 blue paper", price: 30, quantity: 1 },
-        { id: 3, name: "100 sheets A4 mixed color paper", price: 100, quantity: 1 },        
+        { id: 4, name: "50 sheets A4 white paper", price: 40, quantity: 1 },
+        { id: 5, name: "20 sheets A4 blue paper", price: 30, quantity: 1 },
+        { id: 6, name: "100 sheets A4 mixed color paper", price: 100, quantity: 1 },
+        { id: 7, name: "50 sheets A4 white paper", price: 40, quantity: 1 },
+        { id: 8, name: "20 sheets A4 blue paper", price: 30, quantity: 1 },
+        { id: 9, name: "100 sheets A4 mixed color paper", price: 100, quantity: 1 },        
     ]);
 
     const [searchTerm, setSearchTerm] = useState(""); 
@@ -32,9 +34,15 @@ const App: React.FC = () => {
     const navigate = useNavigate();
 
     // Filter products based on search term
-    const filteredProducts = products.filter((product) =>
-        product.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    const filteredProducts = products
+        .filter((product) =>
+            product.name.toLowerCase().includes(searchTerm.toLowerCase())
+        )
+        .sort((a, b) => {
+            if (filter === "priceLowHigh") return a.price - b.price;
+            if (filter === "priceHighLow") return b.price - a.price;
+            return 0;
+        });
 
     // Handle quantity update
     const updateQuantity = (id: number, increment: boolean) => {
@@ -76,6 +84,7 @@ const App: React.FC = () => {
                     className="search-bar"
                 />
                 <select value={filter} onChange={handleFilterChange} className="filter-dropdown">
+                    <option value="">Sort By</option>
                     <option value="priceLowHigh">Price: Low to High</option>
                     <option value="priceHighLow">Price: High to Low</option>
                 </select>
@@ -86,7 +95,8 @@ const App: React.FC = () => {
 
             {/* Product Table */}
             <div className="product-table">
-                {filteredProducts.map((product) => (
+                {filteredProducts.length > 0 ? (
+                    filteredProducts.map((product) => (
                     <div className="product-row" key={product.id}>
                         <div className="product-name">
                             {product.name}
@@ -109,7 +119,10 @@ const App: React.FC = () => {
                             </button>
                         </div>
                     </div>
-                ))}
+                ))
+                ): (
+                    <div>No products found</div>
+                )}
             </div>
         </div>
     );
@@ -121,6 +134,9 @@ const MainApp = () => (
             <Route path="/" element={<App />} />
             <Route path="/new-product" element={<NewProduct />} />
             <Route path="/update-product" element={<UpdateProduct />} />
+            <Route path={"/order-history"} element={<OrderHistory />} />
+            <Route path={"/your-order-history"} element={<YourOrderHistory />} />
+            
         </Routes>
     </Router>
 );
