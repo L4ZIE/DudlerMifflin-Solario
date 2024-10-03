@@ -1,8 +1,12 @@
-// App.tsx
 import React, { useState } from "react";
 import './App.css';
+import { FaShoppingCart } from 'react-icons/fa';
+import NavBar from './NavBar/NavBar.tsx';
+import NewProduct from './NewProduct/NewProduct.tsx';
+import UpdateProduct from './UpdateProduct/UpdateProduct.tsx';
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+    
 
-// Product type
 type Product = {
     id: number;
     name: string;
@@ -15,12 +19,17 @@ const App: React.FC = () => {
         { id: 1, name: "50 sheets A4 white paper", price: 40, quantity: 1 },
         { id: 2, name: "20 sheets A4 blue paper", price: 30, quantity: 1 },
         { id: 3, name: "100 sheets A4 mixed color paper", price: 100, quantity: 1 },
+        { id: 1, name: "50 sheets A4 white paper", price: 40, quantity: 1 },
+        { id: 2, name: "20 sheets A4 blue paper", price: 30, quantity: 1 },
+        { id: 3, name: "100 sheets A4 mixed color paper", price: 100, quantity: 1 },
+        { id: 1, name: "50 sheets A4 white paper", price: 40, quantity: 1 },
+        { id: 2, name: "20 sheets A4 blue paper", price: 30, quantity: 1 },
+        { id: 3, name: "100 sheets A4 mixed color paper", price: 100, quantity: 1 },        
     ]);
 
-    const [searchTerm, setSearchTerm] = useState(""); // Search term state
-    const [filter, setFilter] = useState<string>("recommended"); // Filter state
-   // const [newProduct, setNewProduct] = useState<Product>({ id: 0, name: "", price: 0, quantity: 1 });
-  //  const [isEditing, setIsEditing] = useState<number | null>(null);
+    const [searchTerm, setSearchTerm] = useState(""); 
+    const [filter, setFilter] = useState<string>(""); 
+    const navigate = useNavigate();
 
     // Filter products based on search term
     const filteredProducts = products.filter((product) =>
@@ -48,8 +57,15 @@ const App: React.FC = () => {
         setFilter(event.target.value);
     };
 
+    // Navigate to Update Product page
+    const handleUpdateProduct = (product: Product) => {
+        navigate('/update-product', { state: { product, isEdit: true } });
+    };
+
     return (
         <div className="app">
+            <NavBar/>
+
             {/* Search and Filter Section */}
             <div className="header">
                 <input
@@ -60,11 +76,12 @@ const App: React.FC = () => {
                     className="search-bar"
                 />
                 <select value={filter} onChange={handleFilterChange} className="filter-dropdown">
-                    <option value="recommended">Recommended</option>
                     <option value="priceLowHigh">Price: Low to High</option>
                     <option value="priceHighLow">Price: High to Low</option>
                 </select>
-                <button className="add-product-button">Add product</button>
+                <button onClick={() => navigate('/new-product')} className="add-product-button">
+                    Add product
+                </button>
             </div>
 
             {/* Product Table */}
@@ -74,19 +91,21 @@ const App: React.FC = () => {
                         <div className="product-name">
                             {product.name}
                             <div className="actions">
-                                <span className="action-link">Update</span>
+                                <span className="action-link" onClick={() => handleUpdateProduct(product)}>Update</span>
                                 <span className="action-link">Delete</span>
                             </div>
                         </div>
                         <div className="product-price">{product.price} kr</div>
                         <div className="product-quantity">
-                            <button onClick={() => updateQuantity(product.id, false)} disabled={product.quantity <= 1}>-</button>
+                            <button onClick={() => updateQuantity(product.id, false)}
+                                    disabled={product.quantity <= 1}>-
+                            </button>
                             <span>{product.quantity}</span>
                             <button onClick={() => updateQuantity(product.id, true)}>+</button>
                         </div>
                         <div className="add-to-cart">
                             <button className="cart-button">
-                                <i className="fas fa-shopping-cart"></i>
+                                <FaShoppingCart/>
                             </button>
                         </div>
                     </div>
@@ -96,4 +115,14 @@ const App: React.FC = () => {
     );
 };
 
-export default App;
+const MainApp = () => (
+    <Router>
+        <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="/new-product" element={<NewProduct />} />
+            <Route path="/update-product" element={<UpdateProduct />} />
+        </Routes>
+    </Router>
+);
+
+export default MainApp;

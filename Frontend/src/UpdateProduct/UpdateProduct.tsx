@@ -1,8 +1,8 @@
 ﻿import React, { useState } from 'react';
-import './NewProduct.css'; 
+import './UpdateProduct.css';
 import NavBar from "../NavBar/NavBar.tsx";
 
-const NewProduct: React.FC = () => {
+const UpdateProduct: React.FC = () => {
     const [productName, setProductName] = useState<string>('');
     const [price, setPrice] = useState<number | string>('');
     const [discontinued, setDiscontinued] = useState<string>('');
@@ -22,9 +22,9 @@ const NewProduct: React.FC = () => {
     };
 
     return (
-        <div className="new-product">
+        <div className="update-product">
             <NavBar/>
-            <h1 className="title">New product</h1>
+            <h1 className="title">Update product</h1>
             <form className="product-form" onSubmit={handleSubmit}>
                 {/* Product Name */}
                 <div className="form-group">
@@ -103,10 +103,10 @@ const NewProduct: React.FC = () => {
                 </div>
 
                 {/* Submit Button */}
-                <button type="submit" className="submit-button">Add product</button>
+                <button type="submit" className="submit-button">Save</button>
             </form>
         </div>
     );
 };
 
-export default NewProduct;
+export default UpdateProduct;
