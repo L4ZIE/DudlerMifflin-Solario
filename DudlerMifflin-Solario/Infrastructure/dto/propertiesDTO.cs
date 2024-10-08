@@ -8,7 +8,7 @@ public class propertiesDTO
 {
     private readonly NpgsqlDataSource _dataSource;
 
-        public PropertiesDTO(NpgsqlDataSource dataSource)
+        public propertiesDTO(NpgsqlDataSource dataSource)
         {
             _dataSource = dataSource;
         }

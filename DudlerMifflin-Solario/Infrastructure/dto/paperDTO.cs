@@ -8,7 +8,7 @@ public class paperDTO
 {
     private readonly NpgsqlDataSource _dataSource;
 
-        public PaperDTO(NpgsqlDataSource dataSource)
+        public paperDTO(NpgsqlDataSource dataSource)
         {
             _dataSource = dataSource;
         }

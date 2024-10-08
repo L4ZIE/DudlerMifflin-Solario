@@ -8,7 +8,7 @@ public class customersDTO
 {
     private readonly NpgsqlDataSource _dataSource;
 
-        public CustomersDTO(NpgsqlDataSource dataSource)
+        public customersDTO(NpgsqlDataSource dataSource)
         {
             _dataSource = dataSource;
         }
