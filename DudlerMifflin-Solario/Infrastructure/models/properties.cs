@@ -1,4 +1,4 @@
-﻿namespace DefaultNamespace;
+﻿namespace DudlerMifflin_Solario.Infrastructure.models;
 
 public class properties
 {
