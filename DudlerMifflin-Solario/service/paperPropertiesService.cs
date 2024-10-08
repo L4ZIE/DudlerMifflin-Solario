@@ -7,7 +7,7 @@ public class paperPropertiesService
 {
     private readonly paperPropertiesDTO _paperPropertiesDto;
 
-    public PaperPropertiesService(paperPropertiesDTO paperPropertiesDto)
+    public paperPropertiesService(paperPropertiesDTO paperPropertiesDto)
     {
         _paperPropertiesDto = paperPropertiesDto;
     }

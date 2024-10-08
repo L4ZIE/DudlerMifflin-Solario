@@ -7,7 +7,7 @@ public class propertiesService
 {
     private readonly propertiesDTO _propertiesDto;
 
-    public PropertiesService(propertiesDTO propertiesDto)
+    public propertiesService(propertiesDTO propertiesDto)
     {
         _propertiesDto = propertiesDto;
     }

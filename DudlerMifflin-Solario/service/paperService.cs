@@ -7,7 +7,7 @@ public class paperService
 {
     private readonly paperDTO _paperDto;
 
-    public PaperService(paperDTO paperDto)
+    public paperService(paperDTO paperDto)
     {
         _paperDto = paperDto;
     }
