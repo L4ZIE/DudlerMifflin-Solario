@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace DefaultNamespace;
+﻿namespace DudlerMifflin_Solario.Infrastructure.models;
 
 public class orders
 {
