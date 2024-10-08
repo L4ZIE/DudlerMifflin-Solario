@@ -7,7 +7,7 @@ public class orderEntriesService
 {
     private readonly orderEntriesDTO _orderEntriesDto;
 
-    public OrderEntriesService(orderEntriesDTO orderEntriesDto)
+    public orderEntriesService(orderEntriesDTO orderEntriesDto)
     {
         _orderEntriesDto = orderEntriesDto;
     }

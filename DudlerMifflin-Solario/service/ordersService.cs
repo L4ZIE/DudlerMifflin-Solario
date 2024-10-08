@@ -7,7 +7,7 @@ public class ordersService
 {
     private readonly ordersDTO _ordersDto;
 
-    public OrdersService(ordersDTO ordersDto)
+    public ordersService(ordersDTO ordersDto)
     {
         _ordersDto = ordersDto;
     }
