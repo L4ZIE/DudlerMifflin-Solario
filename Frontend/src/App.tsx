@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import './App.css';
 import { FaShoppingCart } from 'react-icons/fa';
 import NavBar from './NavBar/NavBar.tsx';
@@ -32,6 +32,13 @@ const App: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState(""); 
     const [filter, setFilter] = useState<string>(""); 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        fetch('https://localhost:5173/api/paper')
+            .then(response => response.json())
+            .then(data => setProducts(data))
+            .catch(error => console.error('Error fetching products:', error));
+    }, []);
 
     // Filter products based on search term
     const filteredProducts = products

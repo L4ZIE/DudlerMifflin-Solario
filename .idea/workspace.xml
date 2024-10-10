@@ -5,31 +5,70 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="682c9bfe-5e4d-4d8e-8d0d-1051ed55c173" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/api/controller/OrderEntriesController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/api/controller/OrdersController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/api/controller/PaperController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/api/controller/PaperPropertiesController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/api/controller/PropertiesController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/api/transferModels/CustomersDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/api/transferModels/OrderEntriesDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/api/transferModels/OrdersDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/api/transferModels/PaperDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/api/transferModels/PaperPropertiesDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/api/transferModels/PropertiesDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/utility/Utility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d4626086-8873-4719-893d-bfb08fc9a9c9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d4626086-8873-4719-893d-bfb08fc9a9c9/storage_v2/_src_/database/btyaylat.YPSPkA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d4626086-8873-4719-893d-bfb08fc9a9c9/storage_v2/_src_/database/btyaylat.YPSPkA/schema/project.GUuQ7Q.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d4626086-8873-4719-893d-bfb08fc9a9c9/storage_v2/_src_/database/btyaylat.YPSPkA/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d4626086-8873-4719-893d-bfb08fc9a9c9/storage_v2/_src_/database/btyaylat.YPSPkA/schema/public.abK9xQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/DudlerMifflin-Solario.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/DudlerMifflin-Solario.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/dto/customersDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/infra/CustomersInfra.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/dto/orderEntriesDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/infra/OrderEntriesInfra.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/dto/ordersDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/infra/OrdersInfra.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/dto/paperDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/infra/PaperInfra.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/dto/paperPropertiesDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/infra/PaperPropertiesInfra.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/dto/propertiesDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/infra/PropertiesInfra.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/models/customers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/models/Customers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/models/orderEntries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/models/OrderEntries.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/models/orders.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/models/Orders.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/models/paper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/models/Paper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/models/paperProperties.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/models/PaperProperties.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/models/properties.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Infrastructure/models/Properties.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/bin/Debug/net8.0/DudlerMifflin-Solario.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/bin/Debug/net8.0/DudlerMifflin-Solario.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/bin/Debug/net8.0/DudlerMifflin-Solario.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/bin/Debug/net8.0/DudlerMifflin-Solario.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/bin/Debug/net8.0/DudlerMifflin-Solario.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/bin/Debug/net8.0/DudlerMifflin-Solario.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/bin/Debug/net8.0/DudlerMifflin-Solario.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/bin/Debug/net8.0/DudlerMifflin-Solario.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/bin/Debug/net8.0/DudlerMifflin-Solario.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/bin/Debug/net8.0/DudlerMifflin-Solario.runtimeconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/DudlerMifflin-Solario.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/ref/DudlerMifflin-Solario.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/ref/DudlerMifflin-Solario.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/refint/DudlerMifflin-Solario.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/Debug/net8.0/refint/DudlerMifflin-Solario.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/DudlerMifflin-Solario.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/DudlerMifflin-Solario.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/DudlerMifflin-Solario.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/DudlerMifflin-Solario.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/service/customersService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/service/CustomersService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/service/orderEntriesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/service/OrderEntriesService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/service/ordersService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/service/OrdersService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/service/paperPropertiesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/service/PaperPropertiesService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/service/paperService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/service/PaperService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DudlerMifflin-Solario/service/propertiesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DudlerMifflin-Solario/service/PropertiesService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/obj/Debug/net8.0/Test.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/obj/Debug/net8.0/Test.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/obj/Debug/net8.0/Test.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Test/obj/Debug/net8.0/Test.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/obj/Debug/net8.0/Test.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Test/obj/Debug/net8.0/Test.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/obj/Debug/net8.0/Test.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Test/obj/Debug/net8.0/Test.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/obj/Debug/net8.0/Test.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Test/obj/Debug/net8.0/Test.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/obj/Test.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Test/obj/Test.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/obj/Test.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Test/obj/Test.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Test/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Test/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Test/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Test/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Test/obj/rider.project.restore.info" afterDir="false" />
     </list>
@@ -49,25 +88,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/david/Desktop/DudlerMifflin-Solario&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "development",
+    "last_opened_file_path": "C:/Users/david/Desktop/DudlerMifflin-Solario",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
