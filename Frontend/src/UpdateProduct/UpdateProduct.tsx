@@ -1,29 +1,58 @@
-﻿import React, { useState } from 'react';
+﻿import React, {useEffect, useState} from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './UpdateProduct.css';
 import NavBar from "../NavBar/NavBar.tsx";
 
 const UpdateProduct: React.FC = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const product = location.state?.product || {};
+    
     const [productName, setProductName] = useState<string>('');
     const [price, setPrice] = useState<number | string>('');
     const [discontinued, setDiscontinued] = useState<string>('');
     const [stock, setStock] = useState<number | string>('');
     const [customProperties, setCustomProperties] = useState<string>('');
 
-    const handleSubmit = (e: React.FormEvent) => {
+    useEffect(() => {
+        if (!location.state?.isEdit) {
+            navigate('/');
+        }
+    }, [location, navigate]);
+    
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log({
-            productName,
-            price,
-            discontinued,
-            stock,
-            customProperties
-        });
+
+        const updatedProduct = {
+            paperId: product.paperId,
+            paperName: productName,
+            price: Number(price),
+            discontinued: discontinued === 'yes',
+            stock: Number(stock),
+            customProperties,
+        };
+
+        try {
+            const response = await fetch(`http://localhost:5173/api/Paper/${product.paperId}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(updatedProduct),
+            });
+
+            if (response.ok) {
+                navigate('/', { state: { successMessage: 'Product updated successfully!' } });
+            } else {
+                console.error("Failed to update product");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+        }
     };
 
     return (
         <div className="update-product">
             <NavBar/>
+            
             <h1 className="title">Update product</h1>
             <form className="product-form" onSubmit={handleSubmit}>
                 {/* Product Name */}

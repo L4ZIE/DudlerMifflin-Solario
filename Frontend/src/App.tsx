@@ -1,42 +1,64 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import './App.css';
 import { FaShoppingCart } from 'react-icons/fa';
 import NavBar from './NavBar/NavBar.tsx';
 import NewProduct from './NewProduct/NewProduct.tsx';
 import UpdateProduct from './UpdateProduct/UpdateProduct.tsx';
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes, useLocation, useNavigate} from 'react-router-dom';
 import OrderHistory from "./OrderHistory/OrderHistory.tsx";
 import YourOrderHistory from "./YourOrderHistory/YourOrderHistory.tsx";
+import Cart from "./Cart/Cart";
     
 
 type Product = {
-    id: number;
-    name: string;
-    price: number;
+    paperId: number;
+    paperName: string;
     quantity: number;
+    price: number;
 };
 
 const App: React.FC = () => {
     const [products, setProducts] = useState<Product[]>([
-        { id: 1, name: "50 sheets A4 white paper", price: 40, quantity: 1 },
-        { id: 2, name: "20 sheets A4 blue paper", price: 30, quantity: 1 },
-        { id: 3, name: "100 sheets A4 mixed color paper", price: 100, quantity: 1 },
-        { id: 4, name: "50 sheets A4 white paper", price: 40, quantity: 1 },
-        { id: 5, name: "20 sheets A4 blue paper", price: 30, quantity: 1 },
-        { id: 6, name: "100 sheets A4 mixed color paper", price: 100, quantity: 1 },
-        { id: 7, name: "50 sheets A4 white paper", price: 40, quantity: 1 },
-        { id: 8, name: "20 sheets A4 blue paper", price: 30, quantity: 1 },
-        { id: 9, name: "100 sheets A4 mixed color paper", price: 100, quantity: 1 },        
+        { paperId: 1, paperName: "50 sheets A4 white paper", price: 40, quantity: 1 },
+        { paperId: 2, paperName: "20 sheets A4 blue paper", price: 30, quantity: 1 },
+        { paperId: 3, paperName: "100 sheets A4 mixed color paper", price: 100, quantity: 1 },
+               
     ]);
 
     const [searchTerm, setSearchTerm] = useState(""); 
     const [filter, setFilter] = useState<string>(""); 
+    const [successMessage, setSuccessMessage] = useState<string>("");
     const navigate = useNavigate();
+    const location = useLocation();
+    
+    // Fetch papers from the backend API when the component mounts
+    useEffect(() => {
+        // Check if there is a success message from the state
+        if (location.state?.successMessage) {
+            setSuccessMessage(location.state.successMessage);
+            // clear the state message after showing it once
+            window.history.replaceState({}, document.title);
+        }
+        const fetchProducts = async () => {
+            try {
+                const response = await fetch("http://localhost:5173/api/Paper");
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                setProducts(data);
+            } catch (error) {
+                console.error("Error fetching products", error);
+            }
+        };
+        fetchProducts();
+    }, [location.state]); // refetch when redirected from NewProduct
+    
 
     // Filter products based on search term
     const filteredProducts = products
         .filter((product) =>
-            product.name.toLowerCase().includes(searchTerm.toLowerCase())
+            product.paperName.toLowerCase().includes(searchTerm.toLowerCase())
         )
         .sort((a, b) => {
             if (filter === "priceLowHigh") return a.price - b.price;
@@ -48,7 +70,7 @@ const App: React.FC = () => {
     const updateQuantity = (id: number, increment: boolean) => {
         setProducts((prevProducts) =>
             prevProducts.map((product) =>
-                product.id === id
+                product.paperId === id
                     ? { ...product, quantity: product.quantity + (increment ? 1 : -1) }
                     : product
             )
@@ -74,6 +96,9 @@ const App: React.FC = () => {
         <div className="app">
             <NavBar/>
 
+            {/* Show success message after creating a product */}
+            {successMessage && <div className="success-message">{successMessage}</div>}
+
             {/* Search and Filter Section */}
             <div className="header">
                 <input
@@ -97,9 +122,9 @@ const App: React.FC = () => {
             <div className="product-table">
                 {filteredProducts.length > 0 ? (
                     filteredProducts.map((product) => (
-                    <div className="product-row" key={product.id}>
+                    <div className="product-row" key={product.paperId}>
                         <div className="product-name">
-                            {product.name}
+                            {product.paperName}
                             <div className="actions">
                                 <span className="action-link" onClick={() => handleUpdateProduct(product)}>Update</span>
                                 <span className="action-link">Delete</span>
@@ -107,11 +132,11 @@ const App: React.FC = () => {
                         </div>
                         <div className="product-price">{product.price} kr</div>
                         <div className="product-quantity">
-                            <button onClick={() => updateQuantity(product.id, false)}
+                            <button onClick={() => updateQuantity(product.paperId, false)}
                                     disabled={product.quantity <= 1}>-
                             </button>
                             <span>{product.quantity}</span>
-                            <button onClick={() => updateQuantity(product.id, true)}>+</button>
+                            <button onClick={() => updateQuantity(product.paperId, true)}>+</button>
                         </div>
                         <div className="add-to-cart">
                             <button className="cart-button">
@@ -136,7 +161,7 @@ const MainApp = () => (
             <Route path="/update-product" element={<UpdateProduct />} />
             <Route path={"/order-history"} element={<OrderHistory />} />
             <Route path={"/your-order-history"} element={<YourOrderHistory />} />
-            
+            <Route path={"/cart"} element={<Cart />} />/    
         </Routes>
     </Router>
 );

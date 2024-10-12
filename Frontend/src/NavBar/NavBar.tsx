@@ -14,7 +14,7 @@ const NavBar: React.FC = () => {
                 <button className="nav-button" onClick={() => navigate('/your-order-history')}>Your Order History</button>
             </div>
             <div className="nav-right">
-                <button className="cart-button">
+                <button className="cart-button" onClick={() => navigate('/cart')}>
                     <FaShoppingCart/>
                 </button>
             </div>

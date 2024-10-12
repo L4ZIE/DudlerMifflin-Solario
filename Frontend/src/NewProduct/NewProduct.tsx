@@ -1,6 +1,7 @@
 ﻿import React, { useState } from 'react';
 import './NewProduct.css'; 
 import NavBar from "../NavBar/NavBar.tsx";
+import { useNavigate } from 'react-router-dom';
 
 const NewProduct: React.FC = () => {
     const [productName, setProductName] = useState<string>('');
@@ -8,23 +9,62 @@ const NewProduct: React.FC = () => {
     const [discontinued, setDiscontinued] = useState<string>('');
     const [stock, setStock] = useState<number | string>('');
     const [customProperties, setCustomProperties] = useState<string>('');
-
-    const handleSubmit = (e: React.FormEvent) => {
+    const [message, setMessage] = useState<string>('');
+    
+    const navigate = useNavigate();
+    
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log({
-            productName,
-            price,
-            discontinued,
-            stock,
-            customProperties
-        });
+        
+        const newProduct = {
+            paperName: productName,
+            price: parseFloat(price as string),
+            discontinued: discontinued === 'yes', // Convert string to boolean
+            stock: parseInt(stock as string),
+        };
+        
+        console.log("New product data: ", newProduct);
+        
+        try {
+            const response = await fetch('http://localhost:5000/api/Paper', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(newProduct),
+            });
+
+            console.log("Response Status:", response.status);
+            
+            if (response.ok){
+                console.log("Product created successfully!");
+                
+                setMessage('Product successfully created!');
+                setProductName('');
+                setPrice('');
+                setDiscontinued('no');
+                setStock('');
+                setCustomProperties('');
+
+                // Redirect to main page with success message
+                navigate('/', { state: { successMessage: 'Product successfully created!' } });
+            } else {
+                const errorData = await response.text();
+                console.error("Error creating product, response data:", errorData);
+                setMessage('Error creating product');
+            }
+        } catch (error) {
+            console.error("Error: ", error);
+            setMessage('An error occurred while creating the product');
+        }
     };
+    
 
     return (
         <div className="new-product">
             <NavBar/>
             <h1 className="title">New product</h1>
+            {message && <p>{message}</p>} {/* Success/Error message */}
             <form className="product-form" onSubmit={handleSubmit}>
                 {/* Product Name */}
                 <div className="form-group">
